@@ -9,7 +9,11 @@ export const Joke = ({ userAvatar, userName, text, likes, dislikes }) => {
   return (
     <>
       <div className="container">
-        <div className="joke">
+        <div
+          className={`joke ${
+            palecDolu > palecNahoru ? 'joke--not-funny' : ' '
+          }`}
+        >
           <div className="joke__body">
             <div className="joke__user">
               <img className="user-avatar" src={userAvatar} />
@@ -18,7 +22,6 @@ export const Joke = ({ userAvatar, userName, text, likes, dislikes }) => {
 
             <p className="joke__text">{text}</p>
           </div>
-
           <div className="joke__likes">
             <button
               id="btn-up"
@@ -31,7 +34,7 @@ export const Joke = ({ userAvatar, userName, text, likes, dislikes }) => {
             <button
               id="btn-down"
               className="btn-like btn-like--down"
-              onClick={() => setpalecDolu(palecDolu - 1)}
+              onClick={() => setpalecDolu(palecDolu + 1)}
             ></button>
             <span id="likes-down" className="likes-count likes-count--down">
               {palecDolu}
