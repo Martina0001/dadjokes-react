@@ -7,7 +7,7 @@ import { jokes } from './jokes.js';
 const App = () => {
   return (
     <>
-      <div className="container">
+      <div>
         {jokes.map((joke) => (
           <Joke
             key={joke.id}
