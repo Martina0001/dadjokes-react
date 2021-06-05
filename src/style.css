@@ -5,3 +5,9 @@
 html {
   font-family: sans-serif;
 }
+.container {
+  max-width: 30rem;
+  margin: 5rem auto;
+}
+/*Podívej se v prohlížeči v DevTools na DOM dokumentu. Je tam jeden společný kontejner pro všechny vtipy (s třídou container), uvnitř kterého je každý vtip znovu ve svém divu znovu se třídou container. Není kontejner v kontejneru zbytečný?*/
+/*Pokud cíl je, aby byl dodržen odstup nad a pod komponentou, tak je to zde potřeba.*/
