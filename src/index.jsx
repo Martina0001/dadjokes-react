@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './style.css';
-import { Joke } from './img/App';
+import { Joke } from './components/App';
 import { jokes } from './jokes.js';
 
 const App = () => {
   return (
     <>
-      <div class="container">
+      <div className="container">
         {jokes.map((joke) => (
           <Joke
             key={joke.id}
